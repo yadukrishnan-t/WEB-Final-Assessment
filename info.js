@@ -191,13 +191,13 @@ function checkEmail() {
 
 
 function validateAge() {
-    //var age = document.getElementById('Age').value;
-    var age = document.querySelector('Age').value;
+    var age = document.getElementById('Age').value;
+    
     if(age < 18 || age > 60){ // 
         document.getElementById("errorElement").innerHTML =
       "Enter an age between 18 and 60";
     document.getElementById("submit").disabled = true;
-    document.getElementById("confirmPasswordError").style.border = "2px solid red";
+    document.getElementById("Age").style.border = "2px solid red";
         return false;
     }
 
@@ -205,20 +205,21 @@ function validateAge() {
         document.getElementById("errorElement").innerHTML =
       "";
     document.getElementById("submit").disabled = false;
-    document.getElementById("confirmPasswordError").style.border = "1px solid black";
+    document.getElementById("Age").style.border = "1px solid black";
         return true;
     }
 }
 
 
 function validate() {
-  //console.log("In validate");
+  console.log("In validate");
   //event.preventDefault
   //checkRadio();
   let isValidForm = validateFirstName() && validateLastName() && validatePassword() && checkPasswordMatch() && 
   validateUserName() && checkRadio() && checkEmail() && validateAge();
   console.log(isValidForm);
-    if(isValidForm)
+    
+  if(isValidForm)
     {
         //event.preventDefault();
         alert("Success");
