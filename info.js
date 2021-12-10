@@ -3,12 +3,8 @@ function validatePassword() {
   var bool = false;
   var password = document.getElementById("Password").value;
 
-  // start with alphabet
-  // include one digit
-  // one uppercase
-  // passwords must match
+  // start with alphabet; include one digit; one uppercase; passwords must match; minimum 6 characters
 
-  // minimum 6 characters
   if (password.length >= 6) {
     flag = 1;
     var startAlphabet = /^[a-zA-Z]/g;
@@ -227,4 +223,8 @@ function validate() {
     }
 
   return false;
+}
+
+function resetForm()  {
+  document.getElementById("myForm").reset();
 }

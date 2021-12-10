@@ -40,14 +40,14 @@ p{
 
 .logo {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 34px;
   width: 14%;
   background-clip: border-box;
   margin-right: 5px;
 }
 
-.logoImage{
+.logoImage {
   background-image: url("./images/react.png");
   width: 18%;
 background-size: cover;
@@ -62,6 +62,7 @@ height: 100%;;
   font-size: 25px;
   font-weight: bolder;
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 ul {
@@ -147,8 +148,8 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  /* "formElement errorPanel" */
-  "a b"
+  "formElement errorPanel"
+  /* "a b" */
    ;
 }
 
@@ -158,8 +159,8 @@ main {
   align-items: center;
   margin-top: 10px;
   align-self: center;
-  grid-area: a;
-  /* formElement */
+  grid-area: formElement; 
+  /* a; */
 
 }
 
@@ -167,8 +168,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-area: b; 
-  /* errorPanel */
+  grid-area: errorPanel; 
+  /* b;  */
+  
 }
 
 label{
